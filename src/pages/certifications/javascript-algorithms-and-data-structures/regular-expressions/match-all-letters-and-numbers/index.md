@@ -4,9 +4,14 @@ title: Match All Letters and Numbers
 The Problem
 Use the shorthand character class \w to count the number of alphanumeric characters in various quotes and strings.
 
-Solution
+Solution 1
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/gi; // Change this line
+let result = quoteSample.match(alphabetRegexV2).length;
+
+Solution 2
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w\s*/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
 
 ## Match All Letters and Numbers
